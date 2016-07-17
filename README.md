@@ -22,7 +22,7 @@
 
 #### In XML
 
-```xml
+``` xml
 
 <com.scu.miomin.shswiperefresh.core.SHSwipeRefreshLayout
         android:id="@+id/swipeRefreshLayout"
@@ -44,14 +44,45 @@
 
 ##### 所有属性
 
- - Guidance视图背景颜色 : ```xml <attr name="guidance_view_bg_color" format="color|reference" /> ```
- - Guidance视图中文字颜色 : ```xml <attr name="guidance_text_color" format="color|reference" /> ```
- - 进度条颜色 : ```xml <attr name="progress_bar_color" format="color|reference" /> ```
- - 进度条背景色 : ```xml <attr name="progress_bg_color" format="color|reference" /> ```
- - 下拉刷新文字描述 : ```xml <attr name="refresh_text" format="string|reference" /> ```
- - 上拉加载文字描述 : ```xml <attr name="load_text" format="string|reference" /> ```
- - 下拉刷新是否可用 : ```xml <attr name="pull_refresh_enable" format="boolean" /> ```
- - 上拉加载是否可用 : ```xml <attr name="loadmore_enable" format="boolean" /> ```
+ - Guidance视图背景颜色 : 
+ ``` xml 
+ <attr name="guidance_view_bg_color" format="color|reference" /> 
+ ```
+ 
+ - Guidance视图中文字颜色 : 
+ ``` xml 
+ <attr name="guidance_text_color" format="color|reference" /> 
+ ```
+ 
+ - 进度条颜色 : 
+ ``` xml 
+ <attr name="progress_bar_color" format="color|reference" /> 
+ ```
+ 
+ - 进度条背景色 : 
+ ``` xml 
+ <attr name="progress_bg_color" format="color|reference" /> 
+ ```
+ 
+ - 下拉刷新文字描述 :
+ ``` xml 
+ <attr name="refresh_text" format="string|reference" /> 
+ ```
+ 
+ - 上拉加载文字描述 : 
+ ``` xml 
+ <attr name="load_text" format="string|reference" /> 
+ ```
+ 
+ - 下拉刷新是否可用 : 
+ ``` xml 
+ <attr name="pull_refresh_enable" format="boolean" /> 
+ ```
+ 
+ - 上拉加载是否可用 : 
+ ``` xml 
+ <attr name="loadmore_enable" format="boolean" /> 
+ ```
 
 #### 自定义HeaderView、FooterView
 
@@ -61,7 +92,7 @@
 
  - 设置Resource ID
  
- ```java
+ ``` java
  
  swipeRefreshLayout.setFooterView(R.layout.refresh_view);
 
@@ -69,7 +100,7 @@
  
  - 设置View
   
-  ```java
+  ``` java
   
   swipeRefreshLayout.setFooterView(myview);
  
@@ -77,7 +108,7 @@
   
 #### 监听器
 
-```java
+``` java
   
         swipeRefreshLayout.setOnRefreshListener(new SHSwipeRefreshLayout.SHSOnRefreshListener() {
                @Override
@@ -148,7 +179,7 @@
 
  - 结束下拉刷新
  
- ```java
+ ``` java
    
    swipeRefreshLayout.finishRefresh();
   
@@ -156,7 +187,7 @@
  
  - 结束上拉加载
   
-  ```java
+  ``` java
     
     swipeRefreshLayout.finishLoadmore();
    
@@ -165,6 +196,8 @@
 -------------------
 
 ### License
+
+``` xml
 
 The MIT License (MIT)
 
@@ -187,3 +220,5 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+
+```
