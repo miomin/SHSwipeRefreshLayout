@@ -18,9 +18,9 @@
 
 -------------------
 
-### How to use
+## How to use
 
-#### In XML
+### In XML
 
 ``` xml
 
@@ -42,7 +42,7 @@
 
 ```
 
-##### 所有属性
+### 所有属性
 
  - Guidance视图背景颜色 : 
  ``` xml 
@@ -84,7 +84,9 @@
  <attr name="loadmore_enable" format="boolean" /> 
  ```
 
-#### 自定义HeaderView、FooterView
+-------------------
+
+### 自定义HeaderView、FooterView
 
 如果不设置，则使用默认的ProgressBar+文字
 
@@ -106,7 +108,9 @@
  
   ```
   
-#### 监听器
+-------------------  
+  
+### 监听器
 
 ``` java
   
@@ -174,8 +178,9 @@
 
  - 可以在onRefreshPulStateChange和onLoadmorePullStateChange中，根据参数值来做一些自定义动画
  
- 
-#### 其他方法
+------------------- 
+
+### 其他
 
  - 结束下拉刷新
  
