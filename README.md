@@ -4,7 +4,7 @@
 
 -------------------
 
-#### 如果有帮助，记得左上角的Star一下哟
+#### 如果有帮助，记得右上角的Star一下哟（https://github.com/miomin/SHSwipeRefreshLayout）
 
 -------------------
 
