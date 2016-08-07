@@ -4,6 +4,10 @@
 
 -------------------
 
+#### 如果有帮助，记得右上角的Star一下哟（https://github.com/miomin/SHSwipeRefreshLayout）
+
+-------------------
+
 ### 简介
 
 ![gif](/gif/small.gif)
