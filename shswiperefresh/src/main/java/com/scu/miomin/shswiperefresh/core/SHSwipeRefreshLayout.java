@@ -233,9 +233,7 @@ public class SHSwipeRefreshLayout extends FrameLayout implements NestedScrolling
         if ((!mPullRefreshEnable && !mPullLoadEnable)) {
             return false;
         }
-        if (mRefreshing) {
-            return true;
-        }
+
         return super.onInterceptTouchEvent(ev);
     }
 

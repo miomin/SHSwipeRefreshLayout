@@ -26,5 +26,6 @@ dependencies {
     compile 'com.android.support:recyclerview-v7:24.0.0'
     compile 'com.android.support:design:24.0.0'
 
-    compile project(':shswiperefresh')
+//    compile project(':shswiperefresh')
+    compile 'com.miomin:shswiperefreshlayout:1.2.0'
 }

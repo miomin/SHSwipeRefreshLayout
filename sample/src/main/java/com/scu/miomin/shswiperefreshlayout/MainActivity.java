@@ -40,7 +40,6 @@ public class MainActivity extends AppCompatActivity {
         recyclerView = (RecyclerView) findViewById(R.id.recyclerView);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         recyclerView.setAdapter(new HomeAdapter(this, mDatas));
-        // 设置item动画
         recyclerView.setItemAnimator(new DefaultItemAnimator());
         recyclerView.addItemDecoration(new DividerRVDecoration(this,
                 DividerRVDecoration.VERTICAL_LIST));

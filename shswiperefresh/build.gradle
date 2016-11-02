@@ -1,17 +1,15 @@
 apply plugin: 'com.android.library'
-apply plugin: 'com.github.dcendents.android-maven'
-apply plugin: 'com.jfrog.bintray'
+apply plugin: 'maven'
 
 android {
     compileSdkVersion 24
     buildToolsVersion "23.0.3"
-    resourcePrefix "miomin93"
 
     defaultConfig {
         minSdkVersion 14
         targetSdkVersion 24
-        versionCode 1
-        versionName "1.0.1"
+        versionCode 3
+        versionName "1.2.0"
     }
     buildTypes {
         release {
@@ -27,90 +25,22 @@ dependencies {
     compile 'com.android.support:appcompat-v7:24.0.0'
 }
 
-version = "1.0.1"
+ext {
+    PUBLISH_GROUP_ID = 'com.miomin'
+    PUBLISH_ARTIFACT_ID = 'shswiperefreshlayout'
+    PUBLISH_VERSION = android.defaultConfig.versionName
+}
 
-def siteUrl = 'https://github.com/miomin/SHSwipeRefreshLayout' // 项目主页。
-def gitUrl = 'git@github.com:miomin/SHSwipeRefreshLayout.git' // Git仓库的url。
+uploadArchives {
+    repositories.mavenDeployer {
+        Properties properties = new Properties()
+        properties.load(project.rootProject.file('local.properties').newDataInputStream())
 
-group = "com.miomin"
-
-install {
-    repositories.mavenInstaller {
-        // 生成pom.xml和参数
-        pom {
-            project {
-                packaging 'aar'
-                name 'SHSwipeRefreshLayout For Android'// 可选，项目名称。
-                description 'The Android build the framework of pull to refresh.'// 可选，项目描述。
-                url siteUrl // 项目主页，这里是引用上面定义好。
-
-                // 软件开源协议
-                licenses {
-                    license {
-                        name 'The Apache Software License, Version 2.0'
-                        url 'http://www.apache.org/licenses/LICENSE-2.0.txt'
-                    }
-                }
-
-                //填写开发者基本信息
-                developers {
-                    developer {
-                        id 'miomin93' // 开发者的id。
-                        name 'miomin93' // 开发者名字。
-                        email 'miomin_93@foxmail.com' // 开发者邮箱。
-                    }
-                }
-
-                // SCM
-                scm {
-                    connection gitUrl // Git仓库地址。
-                    developerConnection gitUrl // Git仓库地址。
-                    url siteUrl // 项目主页。
-                }
-            }
+        repository(url: "file://${properties.getProperty("aar.deployPath")}")
+        pom.project {
+            groupId project.PUBLISH_GROUP_ID
+            artifactId project.PUBLISH_ARTIFACT_ID
+            version project.PUBLISH_VERSION
         }
-    }
-}
-
-// 生成jar包的task
-task sourcesJar(type: Jar) {
-    from android.sourceSets.main.java.srcDirs
-    classifier = 'sources'
-}
-
-// 生成jarDoc的task
-task javadoc(type: Javadoc) {
-    source = android.sourceSets.main.java.srcDirs
-    classpath += project.files(android.getBootClasspath().join(File.pathSeparator))
-    // destinationDir = file("../javadoc/")
-    failOnError false // 忽略注释语法错误，如果用jdk1.8你的注释写的不规范就编译不过。
-}
-
-// 生成javaDoc的jar
-task javadocJar(type: Jar, dependsOn: javadoc) {
-    classifier = 'javadoc'
-    from javadoc.destinationDir
-}
-
-artifacts {
-    archives javadocJar
-    archives sourcesJar
-}
-
-// 这里是读取Bintray相关的信息
-Properties properties = new Properties()
-properties.load(project.rootProject.file('local.properties').newDataInputStream())
-bintray {
-    user = properties.getProperty("bintray.user") // Bintray的用户名。
-    key = properties.getProperty("bintray.apikey") // Bintray的ApiKey。
-
-    configurations = ['archives']
-    pkg {
-        repo = "maven"  // 上传到maven库。
-        name = "shswipeRefreshLayout"  // 发布到Bintray上的项目名字
-        websiteUrl = siteUrl
-        vcsUrl = gitUrl
-        licenses = ["Apache-2.0"]
-        publish = true // 是否是公开项目。
     }
 }

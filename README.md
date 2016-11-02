@@ -41,7 +41,7 @@
  
   ``` javaScript
   
-   compile 'com.miomin:shswiperefreshlayout:1.0'
+   compile 'com.miomin:shswiperefreshlayout:1.2.0'
   ```
 
 -------------------
