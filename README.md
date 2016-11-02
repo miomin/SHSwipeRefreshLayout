@@ -6,11 +6,9 @@
 
 #### 如果有帮助，记得右上角的Star一下哟
 
-#### 过几天有空我会放一下依赖~
-
 -------------------
 
-### 简介
+## 简介
 
 ![gif](/gif/small.gif)
 
@@ -24,7 +22,33 @@
 
 -------------------
 
+## 在你的Android Studio中依赖SHSwipeRefreshLayout
+
+ - Step1:在项目根目录的build.gradle中添加我的maven仓库
+ 
+ ``` javaScript
+
+ allprojects {
+    repositories {
+        jcenter()
+        // 添加这一行即可
+        maven { url "https://raw.githubusercontent.com/miomin/mvn-repo-ione/master" }
+    }
+ }
+ ```
+ 
+ - Step2:在Module的build.gradle或者全局添加如下依赖
+ 
+  ``` javaScript
+  
+   compile 'com.miomin:shswiperefreshlayout:1.0'
+  ```
+
+-------------------
+
 ## How to use
+
+#### 下载该工程，具体用法请参考sample
 
 ### In XML
 
@@ -47,6 +71,25 @@
 </com.scu.miomin.shswiperefresh.core.SHSwipeRefreshLayout>
 
 ```
+
+
+### 如果使用ScrollView，需要使用我提供的ShareScrollView
+
+``` xml
+
+<com.scu.miomin.shswiperefresh.core.SHSwipeRefreshLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.scu.miomin.shswiperefresh.view.ShareScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </com.scu.miomin.shswiperefresh.view.ShareScrollView>
+    </com.scu.miomin.shswiperefresh.core.SHSwipeRefreshLayout>
+
+```
+
 
 ### 所有属性
 
@@ -116,7 +159,7 @@
   
 -------------------  
   
-### 监听器
+### 事件监听
 
 ``` java
   
