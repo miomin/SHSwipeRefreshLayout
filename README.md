@@ -2,8 +2,6 @@
 
 支持下拉刷新和上拉加载更多，支持自定义HeaderView和FooterView，支持RecyclerView、ScrollView嵌套滚动，支持所有Layout，支持自定义动画
 
-PS：平时工作比较忙，希望大家提bug的时候有空也可以贡献一点PR
-
 -------------------
 
 #### 如果有帮助，记得右上角的Star一下哟
