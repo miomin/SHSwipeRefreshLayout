@@ -20,13 +20,12 @@
  - 通过NestedScrolling支持RecyclerView和ScrollView的嵌套滚动不收影响
  - 支持所有Layout、View
  - 支持在回调中设置自定义动画
- - 可以同时支持下拉刷新和上拉加载中的其中一个
 
 -------------------
 
-## 在你的Android Studio中依赖SHSwipeRefreshLayout
+## 依赖
 
- - Step1:在项目根目录的build.gradle中添加我的maven仓库
+ - Step1:在工程build.gradle中添加如下maven仓库
  
  ``` javaScript
 
@@ -50,7 +49,7 @@
 
 ## How to use
 
-#### 下载该工程，具体用法请参考sample
+#### 可参考sample中的示例
 
 ### In XML
 
@@ -75,7 +74,7 @@
 ```
 
 
-### 如果使用ScrollView，需要使用ShareScrollView
+### 如需使用ScrollView，请使用ShareScrollView
 
 ``` xml
 
@@ -92,7 +91,7 @@
 
 ```
 
-### 如果使用ListView，需要使用SHListView
+### 如需使用ListView，请使用SHListView
 
 ``` xml
 
@@ -109,7 +108,7 @@
 
 ```
 
-### 所有属性
+### 其它属性
 
  - Guidance视图背景颜色 : 
  ``` xml 
@@ -153,11 +152,11 @@
 
 -------------------
 
-### 自定义HeaderView、FooterView
+### 如何自定义HeaderView、FooterView
 
-如果不设置，则使用默认的ProgressBar+文字
+如果不设置，则使用默认的ProgressBar
 
-也可以这样设置 ： 
+可通过如下代码设置 ： 
 
  - 设置Resource ID
  
@@ -247,7 +246,7 @@
  
 ------------------- 
 
-### 其他
+### 其他接口
 
  - 结束下拉刷新
  
