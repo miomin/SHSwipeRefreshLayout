@@ -4,10 +4,6 @@
 
 -------------------
 
-#### 如果有帮助，记得右上角的Star一下哟
-
--------------------
-
 ## 简介
 
 ![gif](/gif/small.gif)
@@ -41,7 +37,7 @@
  
   ``` javaScript
   
-   compile 'com.miomin:shswiperefreshlayout:1.2.0'
+   compile 'com.miomin:shswiperefreshlayout:1.3.0'
   ```
 
 -------------------
@@ -73,7 +69,7 @@
 ```
 
 
-### 如果使用ScrollView，需要使用我提供的ShareScrollView
+### 如果使用ScrollView，需要使用ShareScrollView
 
 ``` xml
 
@@ -84,12 +80,28 @@
         <com.scu.miomin.shswiperefresh.view.ShareScrollView
             android:layout_width="match_parent"
             android:layout_height="match_parent">
-
         </com.scu.miomin.shswiperefresh.view.ShareScrollView>
-    </com.scu.miomin.shswiperefresh.core.SHSwipeRefreshLayout>
+
+</com.scu.miomin.shswiperefresh.core.SHSwipeRefreshLayout>
 
 ```
 
+### 如果使用ListView，需要使用SHListView
+
+``` xml
+
+<com.scu.miomin.shswiperefresh.core.SHSwipeRefreshLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.scu.miomin.shswiperefresh.view.SHListView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+        </com.scu.miomin.shswiperefresh.view.ShareScrollView>
+
+</com.scu.miomin.shswiperefresh.core.SHSwipeRefreshLayout>
+
+```
 
 ### 所有属性
 
