@@ -1,4 +1,4 @@
-package com.scu.miomin.shswiperefreshlayout;
+package com.scu.miomin.shswiperefreshlayout.util;
 
 import android.content.Context;
 import android.content.res.TypedArray;

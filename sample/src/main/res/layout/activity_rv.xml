@@ -19,10 +19,22 @@
 
     </android.support.design.widget.AppBarLayout>
 
-    <android.support.v7.widget.RecyclerView
-        android:id="@+id/recyclerView"
+    <com.scu.miomin.shswiperefresh.core.SHSwipeRefreshLayout
+        android:id="@+id/swipeRefreshLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+        app:guidance_text_color="@color/colorPrimary"
+        app:guidance_view_bg_color="@color/transparent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        app:load_text="加载更多"
+        app:progress_bar_color="@color/colorPrimary"
+        app:refresh_text="下拉刷新">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </com.scu.miomin.shswiperefresh.core.SHSwipeRefreshLayout>
 
 </android.support.design.widget.CoordinatorLayout>
