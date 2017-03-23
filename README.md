@@ -4,6 +4,12 @@
 
 -------------------
 
+## 提示
+
+如使用其它控件时遇到滑动冲突，请参考源码中ShareScrollView、SHListView的实现自行解决，只需让该控件实现NestedScrollingChild接口即可。
+
+-------------------
+
 ## 简介
 
 ![gif](/gif/small.gif)
