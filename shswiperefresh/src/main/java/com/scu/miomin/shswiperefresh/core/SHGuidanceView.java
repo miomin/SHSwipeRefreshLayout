@@ -14,7 +14,7 @@ import com.scu.miomin.shswiperefresh.util.DipUtils;
 
 
 /**
- * Created by 莫绪旻 on 16/6/24.
+ * Created by miomin on 16/6/24.
  */
 public class SHGuidanceView extends LinearLayout {
 

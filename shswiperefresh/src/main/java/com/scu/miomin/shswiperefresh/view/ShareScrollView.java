@@ -10,7 +10,7 @@ import android.view.View;
 import android.widget.ScrollView;
 
 /**
- * Created by 莫绪旻 on 16/8/4.
+ * Created by miomin on 16/8/4.
  */
 public class ShareScrollView extends ScrollView implements NestedScrollingChild {
 

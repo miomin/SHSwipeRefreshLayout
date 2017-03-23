@@ -25,7 +25,7 @@ import com.scu.miomin.shswiperefresh.R;
 
 
 /**
- * Created by 莫绪旻 on 16/6/24.
+ * Created by miomin on 16/6/24.
  */
 public class SHSwipeRefreshLayout extends FrameLayout implements NestedScrollingParent {
 

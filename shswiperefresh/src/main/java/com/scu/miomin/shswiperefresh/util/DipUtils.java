@@ -5,7 +5,7 @@ import android.util.DisplayMetrics;
 import android.util.TypedValue;
 
 /**
- * Created by 莫绪旻 on 16/6/24.
+ * Created by miomin on 16/6/24.
  */
 public abstract class DipUtils {
 
