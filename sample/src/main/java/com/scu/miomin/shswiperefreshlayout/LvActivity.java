@@ -83,13 +83,13 @@ public class LvActivity extends AppCompatActivity {
             public void onRefreshPulStateChange(float percent, int state) {
                 switch (state) {
                     case SHSwipeRefreshLayout.NOT_OVER_TRIGGER_POINT:
-                        swipeRefreshLayout.setLoaderViewText("下拉刷新");
+                        swipeRefreshLayout.setRefreshViewText("下拉刷新");
                         break;
                     case SHSwipeRefreshLayout.OVER_TRIGGER_POINT:
-                        swipeRefreshLayout.setLoaderViewText("松开刷新");
+                        swipeRefreshLayout.setRefreshViewText("松开刷新");
                         break;
                     case SHSwipeRefreshLayout.START:
-                        swipeRefreshLayout.setLoaderViewText("正在刷新");
+                        swipeRefreshLayout.setRefreshViewText("正在刷新");
                         break;
                 }
             }

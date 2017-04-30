@@ -33,10 +33,16 @@ public class SvActivity extends AppCompatActivity {
     private void initSwipeRefreshLayout() {
         swipeRefreshLayout = (SHSwipeRefreshLayout) findViewById(R.id.swipeRefreshLayout);
 
+
+        /**
+         * 这里Sample中的headerview使用默认设置，即可通过setRefreshViewText（String）来更改headerview中TextView的文字；
+         * 而footview
+         */
         LayoutInflater inflater = LayoutInflater.from(getApplicationContext());
         final View view = inflater.inflate(R.layout.refresh_view, null);
         final TextView textView = (TextView) view.findViewById(R.id.title);
         swipeRefreshLayout.setFooterView(view);
+
         swipeRefreshLayout.setOnRefreshListener(new SHSwipeRefreshLayout.SHSOnRefreshListener() {
             @Override
             public void onRefresh() {
@@ -69,13 +75,13 @@ public class SvActivity extends AppCompatActivity {
             public void onRefreshPulStateChange(float percent, int state) {
                 switch (state) {
                     case SHSwipeRefreshLayout.NOT_OVER_TRIGGER_POINT:
-                        swipeRefreshLayout.setLoaderViewText("下拉刷新");
+                        swipeRefreshLayout.setRefreshViewText("下拉刷新");
                         break;
                     case SHSwipeRefreshLayout.OVER_TRIGGER_POINT:
-                        swipeRefreshLayout.setLoaderViewText("松开刷新");
+                        swipeRefreshLayout.setRefreshViewText("松开刷新");
                         break;
                     case SHSwipeRefreshLayout.START:
-                        swipeRefreshLayout.setLoaderViewText("正在刷新");
+                        swipeRefreshLayout.setRefreshViewText("正在刷新");
                         break;
                 }
             }
